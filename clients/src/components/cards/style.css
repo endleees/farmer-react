@@ -1,0 +1,45 @@
+.cards__list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, 540px);
+
+}
+.cards__item {
+    
+}
+.cards__item--farmer {
+    background: #E1EDCE;
+}
+.cards__item--shop {
+    background: #F8DDD7;
+}
+.cards__item-image {
+    float: left;
+}
+.cards__title-status {
+    white-space: nowrap;
+    margin: 0;
+    position: relative;
+    left: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    display: flex;
+}
+.cards__title-status--farmer {
+    background: #88AA4D;
+}
+.cards__title-status--shop {
+    background: #F75531;
+}
+.cards__title {
+    white-space: nowrap;
+    margin: 0;
+    position: relative;
+    left: 20px;
+    
+}
+.cards__description {
+    width: 500px;
+    
+}
