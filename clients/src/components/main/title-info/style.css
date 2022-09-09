@@ -1,0 +1,30 @@
+.info {
+    background-color:  #D8ECFE;
+    
+}
+.info__container {
+    margin: 0 auto;
+    width: 1100px;
+    display: flex;
+}
+.info__title-wrapper {
+    margin: auto 0;
+}
+.info__title {
+    font-size: 44px;
+    font-weight: 700;
+    margin: 0;
+    display: inline-block;
+    line-height: 51px;
+}
+.info__description {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    display: inline-block;
+    margin-top: 24px;
+    width: 538px;
+}
+.info__image {
+    
+}

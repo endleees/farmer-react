@@ -1,0 +1,11 @@
+.logo-title__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.logo-title__title {
+    font-size: 28px;
+    margin: 0;
+    margin-left: 24px;
+    font-weight: 700;
+}
