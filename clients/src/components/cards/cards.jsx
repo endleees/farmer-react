@@ -19,11 +19,15 @@ function Cards ({mokeCards}){
     return(
         <section className="cards">
             <TitleCards/>
-            <ul className="cards__list">
+            <div className="cards__wrapper">
+                <ul className="cards__list cards__list-farmer">
                     {arrayCards({mokeCards},"farmer")}
-                    {arrayCards({mokeCards},"shop")}
-            </ul>
 
+                </ul>
+                <ul className="cards__list cards__list-shop">
+                    {arrayCards({mokeCards},"shop")}
+                </ul>
+            </div>
         </section>
 
     )

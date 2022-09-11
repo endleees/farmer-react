@@ -24,7 +24,5 @@
     display: inline-block;
     margin-top: 24px;
     width: 538px;
-}
-.info__image {
-    
+    line-height: 27px;
 }
