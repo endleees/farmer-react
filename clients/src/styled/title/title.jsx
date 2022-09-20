@@ -25,7 +25,7 @@ function Title({
   className
 }) {
   return (
-    <StyledTitle as={`h${level}`} $size={size} className={className}>
+    <StyledTitle  as={`h${level}`} $size={size} className={className}>
       {children}
     </StyledTitle>
   );

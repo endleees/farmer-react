@@ -1,11 +1,10 @@
-import styled from "styled-components";
+import styled,{css} from "styled-components";
 import { TitleSize } from "./title";
 
-export const StyledTitle = styled.h1`
-    white-space: nowrap;
+
+
+export  const StyledTitle = styled.h1`
     margin: 0;
-    position: relative;
-    left: 20px;
     font-size: 18px;
     margin-top: 6px;
     margin: 0;
@@ -25,6 +24,6 @@ export const StyledTitle = styled.h1`
       }
       return fontSize;
     }};
+    
 `;
-
 export default StyledTitle;

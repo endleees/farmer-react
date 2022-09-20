@@ -1,7 +1,7 @@
 import styled, {css} from "styled-components";
 const cardImg = css`
     float: left;
-  
+    margin-right: 20px;
 `;
 
 

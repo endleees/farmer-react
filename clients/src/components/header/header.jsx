@@ -1,12 +1,12 @@
 import React from "react";
 import Navigation from "./navigation/navigation";
-
+import PageHeader from "../../styled/header/header";
 
 function Header ({mokeNavigation}){
     return (
-    <header>
+    <PageHeader>
         <Navigation mokeNavigation={mokeNavigation}/>
-    </header>
+    </PageHeader>
     )
 }
 

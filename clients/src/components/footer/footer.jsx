@@ -1,17 +1,20 @@
 import React from "react";
-import "./style.css";
+
 import LogoTitle from "../header/logo-title/logo-title";
+import Div from "../../styled/wrappers/main-page/styled";
+import PageFooter from "../../styled/footer/footer";
+import Span from "../../styled/span/span";
 
 function Footer({mokeNavigation}){
     return (
-        <footer className="footer">
-            <div className="footer__wrapper">
-        <LogoTitle mokeNavigation= {mokeNavigation}></LogoTitle>
-        <span className="footer__created">
-            Создано 2021
-        </span>
-        </div>
-        </footer>
+        <PageFooter>
+            <Div footerWrapper>
+                <LogoTitle mokeNavigation= {mokeNavigation}></LogoTitle>
+                <Span>
+                    Создано 2021
+                </Span>
+            </Div>
+        </PageFooter>
     )
 }
 export default Footer

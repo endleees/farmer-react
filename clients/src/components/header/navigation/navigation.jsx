@@ -1,14 +1,14 @@
 import React from "react";
+import Nav from "../../../styled/nav/nav";
 import BuyButton from "../buy-button/buy-button";
 import LogoTitle from "../logo-title/logo-title";
-import './style.css'
 
 function Navigation ({mokeNavigation}){
     return (
-        <nav className="nav">
+        <Nav>
             <LogoTitle mokeNavigation={mokeNavigation}/>
-            <BuyButton/>
-        </nav>
+            <BuyButton link="/buy"/>
+        </Nav>
     );
 }
 

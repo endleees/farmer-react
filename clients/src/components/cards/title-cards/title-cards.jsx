@@ -1,9 +1,10 @@
 import React from "react";
+import Title, { TitleLevel, TitleSize } from "../../../styled/title/title";
 import './style.css';
 
 function TitleCards (){
     return(
-        <h2 class="title-cards__title">Почему фермерские продукты лучше?</h2>
+        <Title level={TitleLevel.H1} size className="title-cards__title">Почему фермерские продукты лучше?</Title>
 
     )
 }

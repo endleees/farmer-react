@@ -1,14 +1,16 @@
 import React from "react";
-import './style.css';
+import P from "../../../styled/p/p";
+import Div from "../../../styled/wrappers/main-page/styled";
+
 
 function LogoTitle({mokeNavigation}){
   return( 
-    <div className="logo-title__wrapper">
+    <Div footerWrapper>
         <img className="logo-title__logo" src={mokeNavigation.img.src} width={mokeNavigation.img.width} height={mokeNavigation.img.height}/>
-        <p className="logo-title__title">
+        <P logoTitle>
             Фермерские продукты
-        </p>
-    </div>
+        </P>
+    </Div>
         )
 
 }

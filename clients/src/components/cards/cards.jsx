@@ -2,10 +2,10 @@ import React from "react";
 import Img from "../../styled/img/img";
 import Li from "../../styled/li/li";
 import P from "../../styled/p/p";
+import Section from "../../styled/section/section";
 import Title, { TitleLevel, TitleSize } from "../../styled/title/title";
 import Ul from "../../styled/ul/ul";
 import Div from "../../styled/wrappers/main-page/styled";
-import './style.css';
 import TitleCards from "./title-cards/title-cards";
 
 
@@ -16,7 +16,7 @@ function Cards ({mokeCards}){
             
             const card= <Li stat={stat}><Img cardImg src={mokeCards[stat].imgSrc[i]} width={mokeCards[stat].imgWidth[i]} height={mokeCards[stat].imgHeight[i]}/>
                 <P cardStatus={stat} >{mokeCards[stat].titleStatus}</P>
-                <Title level={TitleLevel.H2} size={TitleSize.SMALL}>{mokeCards[stat].title[i]}</Title>
+                <Title  level={TitleLevel.H3} size={TitleSize.SMALL}>{mokeCards[stat].title[i]}</Title>
                 <P cardDesc>{mokeCards[stat].description[i]}</P>
             </Li> ;
             array.push(card);
@@ -24,7 +24,7 @@ function Cards ({mokeCards}){
         return array
     }
     return(
-        <section className="cards">
+        <Section cards>
             <TitleCards/>
             <Div cardsWrapper>
                 <Ul>
@@ -35,7 +35,7 @@ function Cards ({mokeCards}){
                     {arrayCards({mokeCards},"shop")}
                 </Ul>
             </Div>
-        </section>
+        </Section>
 
     )
 }

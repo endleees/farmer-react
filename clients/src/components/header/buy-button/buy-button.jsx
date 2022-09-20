@@ -1,11 +1,11 @@
 import React from "react";
-import './style.css'
+import StyledButton from "./styled";
 
-function BuyButton(){
+function BuyButton({link}){
     return(
-        <button className="buy-button">
+        <StyledButton {...(link ? { href: link } : { as: "button", type: "button" })}>
             Купить
-        </button>
+        </StyledButton>
     )
 }
 export default BuyButton

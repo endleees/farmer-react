@@ -1,20 +1,24 @@
 import React from "react";
-import './style.css';
+import P from "../../../styled/p/p";
+import Section from "../../../styled/section/section";
+import Title, { TitleLevel, TitleSize } from "../../../styled/title/title";
+import Div from "../../../styled/wrappers/main-page/styled";
+
 
 function TitleInfo({mokeInfo}){
-   return <section className="info">
-        <div className="info__container">
-            <div className="info__title-wrapper">
-                <h1 className="info__title">
-                Магазин фермерских продуктов с доставкой
-                </h1>
-                <p className="info__description">
+   return <Section info>
+        <Div infoContainer>
+            <Div infoTitleWrapper>
+                <Title level={TitleLevel.H1} size={TitleSize.BIG}>
+                    Магазин фермерских продуктов с доставкой
+                </Title>
+                <P infoDesc>
                     Все продукты изготавливаются под заказ. Фермеры начинают готовить продукты за день до отправки заказа клиентам. Именно поэтому мы принимаем заказы заранее и доставляем продукты максимально свежими.
-                </p>
-            </div>
+                </P>
+            </Div>
             <img className="info__image" src={mokeInfo.img.src} width={mokeInfo.img.width}height={mokeInfo.img.height}/>
-        </div>
-    </section>
+        </Div>
+    </Section>
 }
 
 export default TitleInfo
