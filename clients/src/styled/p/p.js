@@ -35,6 +35,10 @@ const infoDesc = css `
     line-height: 27px;
 }
 `
+const orderCheckboxTitles = css `
+    font-size: 18px;
+    font-weight: 700;
+    `
 
 const farmer =css`
     background: #88AA4D;
@@ -51,5 +55,6 @@ ${(props) => {
      }}
 ${(props) => (props.cardDesc  ? cardDesc : "")}
 ${(props) => (props.infoDesc  ? infoDesc : "")}
+${(props) => (props.orderCheckboxTitles  ? orderCheckboxTitles : "")}
 `;
 export default P

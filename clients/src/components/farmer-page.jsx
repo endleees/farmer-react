@@ -1,13 +1,13 @@
 import React from "react";
 import Footer from "./footer/footer";
 import Header from "./header/header";
-import Main from "./main/main";
+import Main from "./order-page/main/main";
 
-function FarmerPage ({mokeNavigation,mokeInfo,mokeCards}){
+function FarmerPage ({mokeNavigation,mokeInfo,mokeCards,MokeCheckbox,products}){
     return(
         <>
             <Header mokeNavigation= {mokeNavigation} />
-            <Main mokeInfo= {mokeInfo} mokeCards={mokeCards}/>
+            <Main mokeInfo= {mokeInfo} mokeCards={mokeCards} MokeCheckbox={MokeCheckbox} products={products}/>
             <Footer mokeNavigation= {mokeNavigation}/>
         </>
     )
