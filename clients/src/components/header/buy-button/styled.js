@@ -4,7 +4,7 @@ export const StyledButton = styled.a`
     background-color: #FC9B27;
     border: none;
     color: #fff;
-    width: 260px;
+    width: ${(props) => props.buttonSize ? `${props.buttonSize}%` : "260px" };
     height: 60px;
     font-size: 18px;
     font-weight: 700;
@@ -12,6 +12,7 @@ export const StyledButton = styled.a`
     display:flex;
     align-items: center;
     justify-content: center;
+    margin-right: ${(props) => props.marginRight}px;
 
     &:hover,
     &:active {

@@ -12,7 +12,7 @@ import { CustomSwiper } from "../order-page/main/styled";
 import Price from "../price/price";
 
 
-function AsideOrder ({MokeCheckbox, products}) { 
+ function AsideOrder ({MokeCheckbox, products}) { 
   const [selectProductIds, setSelectProductIds] = useState([]);
   const [swiperRef, setSwiperRef] = useState(null);
   const handleOnClickProduct = (value, index) => {
@@ -28,7 +28,16 @@ function AsideOrder ({MokeCheckbox, products}) {
       (sum, product) => (sum += product.price),
       0
    );
-   return (
+   const [address, setAddress] = useState("");
+   const handleBuyClick = () => {
+      // eslint-disable-next-line no-alert
+      alert(`Спасибо за заказ, вы купили:\n${selectProducts.map(
+        (product) => `${product.name} - ${product.price} руб.\n`
+      )}
+      Итого: ${fullPrice} руб.
+      Доставка по адресу: ${address}.`);
+   };
+   return products && products.length ? (
       <>
       <Aside>
          <Div orderPurchase marginBottom="18">
@@ -54,10 +63,13 @@ function AsideOrder ({MokeCheckbox, products}) {
             <Title size={TitleSize.SMALL} marginBottom={24}>
               Сделать заказ
             </Title>
-            <AddressInput placeholder="Введите адрес доставки" />
+            <AddressInput value={address}
+               onChange={(e) => setAddress(e.target.value)} 
+               placeholder="Введите адрес доставки" 
+            />
             <PriceLabel >Цена</PriceLabel>
-            <Price value={fullPrice}>0</Price>
-            <BuyButton maxWidth>Купить</BuyButton>
+            <Price  value={fullPrice}>0</Price>
+            <BuyButton buttonSize={100} onClick={handleBuyClick} disabled={!(selectProductIds.length && address)}>Купить</BuyButton>
          </Div>
          
       </Aside>
@@ -80,6 +92,6 @@ function AsideOrder ({MokeCheckbox, products}) {
 
 </CustomSwiper>
 </>
-   )
+   ): ("Продукты были слишком вкусные и их разобрали.");
 }
 export default AsideOrder

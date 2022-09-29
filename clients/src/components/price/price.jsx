@@ -7,9 +7,9 @@ const formatPrice = (value) => {
 };
 
 // Отформатированная цена
-function Price({ value, className }) {
+function Price({ value, className,...props }) {
   return (
-    <StyledPrice className={className}>{formatPrice(value)} руб.</StyledPrice>
+    <StyledPrice marginBottom={32}  className={className}>{formatPrice(value)} руб.</StyledPrice>
   );
 }
 
