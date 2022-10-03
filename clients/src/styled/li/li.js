@@ -16,6 +16,7 @@ const shop = css`
 const Li = styled.li`
     list-style-type: none;
     ${(props) => (props.stat==="farmer"  ? farmer : "")}
+    ${(props) => (props.stat==="shop"  ? shop : "")}
     &:not(:last-child){
         margin-bottom: 20px;
     }

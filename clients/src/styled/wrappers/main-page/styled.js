@@ -46,13 +46,19 @@ const orderPurchase= css`
     background-color: ${(props) => props.theme.colorWhite};
 `
 const orderCards =css `
-   
     display: flex;
     padding: 40px 0;
 `
+const CardsTitleWrapper = css `
+    font-weight: 700;
+    margin: 0;
+    margin-top: 100px;
+    margin-bottom: 64px;
+    text-align: center;
+    `
 
 const Div = styled.div`
-
+${(props) => (props.CardsTitleWrapper  ? CardsTitleWrapper : "")}
 ${(props) => (props.cardsWrapper  ? cardsWrapper : "")}
 ${(props) => (props.footerWrapper  ? footerWrapper : "")}
 ${(props) => (props.mainWrapperButton  ? mainWrapperButton : "")}

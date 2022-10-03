@@ -9,7 +9,7 @@ import ProductCart from "../product-card/product-card";
 
 
 
-function Main ({MokeCheckbox,products}){
+function MainOrder ({MokeCheckbox,products}){
     return(
         <PageMain PageColor>
             <Form>
@@ -24,4 +24,4 @@ function Main ({MokeCheckbox,products}){
       
     )
 }
-export default Main
+export default MainOrder

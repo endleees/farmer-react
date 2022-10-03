@@ -14,7 +14,7 @@ function Cards ({mokeCards}){
         let array=[];
         for(let i=0;i<mokeCards[stat].imgSrc.length;i++){
             
-            const card= <Li stat={stat}><Img cardImg src={mokeCards[stat].imgSrc[i]} width={mokeCards[stat].imgWidth[i]} height={mokeCards[stat].imgHeight[i]}/>
+            const card= <Li key={`card-${stat}-${i}`} stat={stat}><Img cardImg src={mokeCards[stat].imgSrc[i]} width={mokeCards[stat].imgWidth[i]} height={mokeCards[stat].imgHeight[i]}/>
                 <P cardStatus={stat} >{mokeCards[stat].titleStatus}</P>
                 <Title  level={TitleLevel.H3} size={TitleSize.SMALL}>{mokeCards[stat].title[i]}</Title>
                 <P cardDesc>{mokeCards[stat].description[i]}</P>

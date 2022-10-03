@@ -21,11 +21,10 @@ export const TitleLevel = {
 function Title({
   level, 
   size, 
-  children, 
-  className
+  children,className
 }) {
   return (
-    <StyledTitle  as={`h${level}`} $size={size} className={className}>
+    <StyledTitle  as={`h${level}`} $size={size} className={className} >
       {children}
     </StyledTitle>
   );

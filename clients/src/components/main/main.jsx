@@ -5,15 +5,15 @@ import TitleInfo from "./title-info/title-info";
 import Div from "../../styled/wrappers/main-page/styled";
 import PageMain from "../../styled/main/main";
 
-function Main ({mokeInfo,mokeCards}){
+function MainIndex ({mokeInfo,mokeCards}){
     return(
         <PageMain>
         <TitleInfo mokeInfo={mokeInfo}/>
         <Cards mokeCards={mokeCards}/>
         <Div mainWrapperButton>
-            <BuyButton link="/order"/>
+            <BuyButton link="/order"> Купить </BuyButton>
         </Div>
         </PageMain>
     )
 }
-export default Main
+export default MainIndex

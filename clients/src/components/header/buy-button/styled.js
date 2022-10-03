@@ -1,7 +1,11 @@
-import styled from "styled-components";
+import { Link, useLocation } from "react-router-dom";
+import styled, { css } from "styled-components";
+import { AppRoute } from "../../../const";
 
-export const StyledButton = styled.a`
-    background-color: #FC9B27;
+
+export const StyledButton = styled(Link)`
+
+background-color: #FC9B27;
     border: none;
     color: #fff;
     width: ${(props) => props.buttonSize ? `${props.buttonSize}%` : "260px" };
@@ -24,4 +28,15 @@ export const StyledButton = styled.a`
     box-shadow: none;
   }
 `;
-export default StyledButton
+export const OrderButtonStyled =styled(Link)`
+  font-size: 18px;
+    font-weight: 700;
+    height: 60px;
+    display:flex;
+    color: #000;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    width: ${(props) => props.buttonSize ? `${props.buttonSize}%` : "260px" };
+`
+export default StyledButton 

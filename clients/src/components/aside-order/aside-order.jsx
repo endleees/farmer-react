@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import P from "../../styled/p/p";
-import Title, {TitleSize} from "../../styled/title/title";
+import Title, {TitleLevel, TitleSize} from "../../styled/title/title";
 import Div from "../../styled/wrappers/main-page/styled";
 import BuyButton from "../header/buy-button/buy-button";
 import CheckboxList from "./checkBox-list/checkBox-list";
@@ -41,9 +41,9 @@ import Price from "../price/price";
       <>
       <Aside>
          <Div orderPurchase marginBottom="18">
-            <P orderCheckboxTitles>
+            <Title level={TitleLevel.H2} size={TitleSize.SMALL} marginBottom={24}>
             {MokeCheckbox.title}
-            </P>
+            </Title>
             <Div orderCheckbox>
             <CheckboxList
             labelComponent={CheckboxLabel}
@@ -60,7 +60,7 @@ import Price from "../price/price";
             </Div>
          </Div>
          <Div orderPurchase >
-            <Title size={TitleSize.SMALL} marginBottom={24}>
+            <Title level={TitleLevel.H2} size={TitleSize.SMALL} marginBottom={24}>
               Сделать заказ
             </Title>
             <AddressInput value={address}
